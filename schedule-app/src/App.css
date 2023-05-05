@@ -25,3 +25,27 @@ input[type="range"]{
   border: 1px solid rebeccapurple;
   margin: 0;
 }
+
+select{
+  font-size: 25px;
+}
+
+#add-button{
+  font-size: 20px;
+}
+
+table{
+  margin-top : 5px;
+  width: 200px
+}
+
+table,
+td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+thead {
+  background-color: black;
+  color: white;
+}
