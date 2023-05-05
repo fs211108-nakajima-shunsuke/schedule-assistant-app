@@ -1,0 +1,27 @@
+
+.slider{
+  /* transform: rotate(-90deg); */
+  width: 300px;
+  height: 200px;
+  border: 1px solid black ;
+}
+
+datalist{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  writing-mode: vertical-lr;
+  width: 300px;
+}
+
+option{
+  padding: 0;
+}
+
+input[type="range"]{
+  /* display: block; */
+  width: 300px;
+  height: 200px;
+  border: 1px solid rebeccapurple;
+  margin: 0;
+}
