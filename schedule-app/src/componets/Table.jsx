@@ -1,6 +1,10 @@
 import React from "react";
 
-function Table({ resultTime }) {
+function Table({ resultTime , removeData}) {
+    // const removeData = () => {
+
+    // }
+
   return (
     <>
       <table>
@@ -24,6 +28,9 @@ function Table({ resultTime }) {
       <tr key={index}>
         <td>{t.start}</td>
         <td>{t.end}</td>
+        <td id='remove-button'>
+            <button onClick={() => removeData(t.index)}>削除</button>
+        </td>
       </tr>
     );
   }

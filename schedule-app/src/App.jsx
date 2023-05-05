@@ -20,6 +20,12 @@ function App() {
     setResultTime([...resultTime, temp]);
   }
 
+  const removeTimeFromResult = (index) =>{
+    const temp = resultTime;
+    temp.splice(index, 1);
+    setResultTime([...temp]);
+  }
+
   return (
     <>
       <h1>Schedule Assistant</h1>
@@ -40,7 +46,7 @@ function App() {
         <button id="add-button" onClick={() => addTimeToResult()}>追加</button>
       </div>
       <div>
-        <Table resultTime={resultTime}/>
+        <Table resultTime={resultTime} removeData={removeTimeFromResult} />
       </div>
     </>
   );
