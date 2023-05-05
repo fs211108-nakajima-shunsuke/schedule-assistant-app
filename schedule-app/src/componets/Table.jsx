@@ -1,13 +1,9 @@
 import React from "react";
 
-function Table({ resultTime , removeData}) {
-    // const removeData = () => {
-
-    // }
-
+function Table({ resultTime, removeData }) {
   return (
     <>
-      <table>
+      <table id="time-table">
         <thead>
           <tr>
             <th>開始</th>
@@ -25,11 +21,11 @@ function Table({ resultTime , removeData}) {
 
   function tableData(index, t) {
     return (
-      <tr key={index}>
+      <tr id="table-data-tr" key={index}>
         <td>{t.start}</td>
         <td>{t.end}</td>
-        <td id='remove-button'>
-            <button onClick={() => removeData(t.index)}>削除</button>
+        <td id="remove-button">
+          <button onClick={() => removeData(t.index)}>削除</button>
         </td>
       </tr>
     );

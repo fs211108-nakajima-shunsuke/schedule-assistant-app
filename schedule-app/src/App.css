@@ -1,29 +1,15 @@
-
-.slider{
-  /* transform: rotate(-90deg); */
-  width: 300px;
-  height: 200px;
-  border: 1px solid black ;
+#root{
+  padding: 15px 0 0 30px;
 }
 
-datalist{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  writing-mode: vertical-lr;
-  width: 300px;
+h2{
+  font-size: 15px;
 }
 
-option{
-  padding: 0;
-}
-
-input[type="range"]{
-  /* display: block; */
-  width: 300px;
-  height: 200px;
-  border: 1px solid rebeccapurple;
-  margin: 0;
+.select-area{
+  display: inline-block;
+  padding: 5px 20px 15px 15px;
+  border: 1px solid black;
 }
 
 select{
@@ -32,13 +18,19 @@ select{
 
 #add-button{
   font-size: 20px;
+  margin-left: 15px;
+}
+
+#table-and-copy{
+  display: flex;
+  /* align-items: center; */
+  align-self: flex-start;
 }
 
 table{
-  margin-top : 5px;
-  width: 200px
+  margin-top : 20px;
+  width: 250px
 }
-
 td {
   border: 1px solid black;
   text-align: center;
@@ -51,4 +43,9 @@ td {
 thead {
   background-color: black;
   color: white;
+}
+
+#copy-button{
+  margin: 30px 0 0 0 ;
+  height: 50px;
 }

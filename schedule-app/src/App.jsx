@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import SelectTime from "./componets/SelectTime";
-import Table from "./componets/Table"
+import Table from "./componets/Table";
+import CopyButton from "./componets/CopyButton"
 
 function App() {
   const [sTime, setSTime] = useState("9:00");
@@ -12,25 +13,25 @@ function App() {
     callback(e.target.value);
   };
 
-  const addTimeToResult = () =>{
+  const addTimeToResult = () => {
     const temp = {
-      start : sTime,
-      end : eTime
-    }
+      start: sTime,
+      end: eTime,
+    };
     setResultTime([...resultTime, temp]);
-  }
+  };
 
-  const removeTimeFromResult = (index) =>{
+  const removeTimeFromResult = (index) => {
     const temp = resultTime;
     temp.splice(index, 1);
     setResultTime([...temp]);
-  }
+  };
 
   return (
     <>
-      <h1>Schedule Assistant</h1>
-      <div>
-
+      <h1>スケジュール アシスタント</h1>
+      <div className="select-area">
+        <h2>空いている時間帯を選択してください</h2>
         <SelectTime
           defaultTime="9:00"
           setTime={setSTime}
@@ -38,16 +39,19 @@ function App() {
         />
         <span> ~ </span>
         <SelectTime
-          defaultTime="12:00"
+          defaultTime="10:00"
           setTime={setETime}
           handleTime={handleTime}
         />
-        <span> </span>
-        <button id="add-button" onClick={() => addTimeToResult()}>追加</button>
+        <button id="add-button" onClick={() => addTimeToResult()}>
+          追加
+        </button>
       </div>
-      <div>
+      <div id="table-and-copy">
         <Table resultTime={resultTime} removeData={removeTimeFromResult} />
+        <CopyButton />
       </div>
+      
     </>
   );
 }
