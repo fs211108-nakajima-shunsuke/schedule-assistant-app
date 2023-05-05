@@ -11,18 +11,22 @@ function Table({ resultTime }) {
           </tr>
         </thead>
         <tbody>
-          {resultTime.map((t) => {
-            return (
-              <tr key={t}>
-                <td>{t.start}</td>
-                <td>{t.end}</td>
-              </tr>
-            );
+          {resultTime.map((t, index) => {
+            return tableData(index, t);
           })}
         </tbody>
       </table>
     </>
   );
+
+  function tableData(index, t) {
+    return (
+      <tr key={index}>
+        <td>{t.start}</td>
+        <td>{t.end}</td>
+      </tr>
+    );
+  }
 }
 
 export default Table;
