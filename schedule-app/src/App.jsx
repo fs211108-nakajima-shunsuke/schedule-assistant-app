@@ -30,6 +30,7 @@ function App() {
   const removeTimeFromResult = (index) => {
     const temp = resultTime;
     temp.splice(index, 1);
+
     setResultTime([...temp]);
   };
 

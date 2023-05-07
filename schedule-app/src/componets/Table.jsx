@@ -25,7 +25,7 @@ function Table({ resultTime, removeData }) {
         <td>{t.start}</td>
         <td>{t.end}</td>
         <td id="remove-button">
-          <button onClick={() => removeData(t.index)}>削除</button>
+          <button onClick={() => removeData(index)}>削除</button>
         </td>
       </tr>
     );
