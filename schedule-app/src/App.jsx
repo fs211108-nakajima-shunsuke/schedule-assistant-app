@@ -6,7 +6,7 @@ import CopyButton from "./componets/CopyButton"
 
 function App() {
   const [sTime, setSTime] = useState("9:00");
-  const [eTime, setETime] = useState("12:00");
+  const [eTime, setETime] = useState("9:30");
   const [resultTime, setResultTime] = useState([]);
 
   const handleTime = (e, callback) => {
@@ -19,7 +19,13 @@ function App() {
       end: eTime,
     };
     setResultTime([...resultTime, temp]);
+    advanceSTimePrevETime();
   };
+
+  const advanceSTimePrevETime = ()=>{
+    const temp = eTime;
+    setSTime(temp);
+  }
 
   const removeTimeFromResult = (index) => {
     const temp = resultTime;
@@ -33,13 +39,13 @@ function App() {
       <div className="select-area">
         <h2>空いている時間帯を選択してください</h2>
         <SelectTime
-          defaultTime="9:00"
+          defaultTime={sTime}
           setTime={setSTime}
           handleTime={handleTime}
         />
         <span> ~ </span>
         <SelectTime
-          defaultTime="10:00"
+          defaultTime={eTime}
           setTime={setETime}
           handleTime={handleTime}
         />
