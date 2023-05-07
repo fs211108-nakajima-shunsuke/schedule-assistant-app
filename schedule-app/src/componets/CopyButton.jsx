@@ -4,12 +4,27 @@ function CopyButton() {
   const copyButton = () => {
     let txt = document.querySelector("#time-table").innerText;
     const replacedTxt = txt.replace(/削除/g, "");
-    console.log(replacedTxt);
     navigator.clipboard.writeText(replacedTxt);
+
+    toggleOverlay();
   };
+
+  const toggleOverlay = () => {
+    const overlay = document.getElementById("copy-overlay");
+    overlay.classList.toggle("overlay-on");
+    setTimeout(() => {
+      overlay.classList.toggle("overlay-on");
+    }, 1500);
+  };
+
   return (
     <>
-      <button id='copy-button' onClick={() => copyButton()}>コピー</button>
+      <div>
+        <button id="copy-button" onClick={() => copyButton()}>
+          コピー
+        </button>
+        <p id="copy-overlay">コピーしました!!</p>
+      </div>
     </>
   );
 }

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import SelectTime from "./componets/SelectTime";
 import Table from "./componets/Table";
-import CopyButton from "./componets/CopyButton"
+import CopyButton from "./componets/CopyButton";
 
 function App() {
   const [sTime, setSTime] = useState("9:00");
@@ -22,10 +22,10 @@ function App() {
     advanceSTimePrevETime();
   };
 
-  const advanceSTimePrevETime = ()=>{
+  const advanceSTimePrevETime = () => {
     const temp = eTime;
     setSTime(temp);
-  }
+  };
 
   const removeTimeFromResult = (index) => {
     const temp = resultTime;
@@ -53,11 +53,12 @@ function App() {
           追加
         </button>
       </div>
-      <div id="table-and-copy">
-        <Table resultTime={resultTime} removeData={removeTimeFromResult} />
-        <CopyButton />
+      <div>
+        <div id="table-and-copy">
+          <Table resultTime={resultTime} removeData={removeTimeFromResult} />
+          <CopyButton />
+        </div>
       </div>
-      
     </>
   );
 }

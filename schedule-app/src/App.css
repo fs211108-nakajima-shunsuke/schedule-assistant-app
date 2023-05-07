@@ -49,3 +49,17 @@ thead {
   margin: 30px 0 0 0 ;
   height: 50px;
 }
+
+#copy-overlay{
+  visibility: hidden;
+  border:1px solid rgb(155, 155, 155); 
+  border-radius: 5px;
+  padding: 4px;
+  margin-top: 2px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+#copy-overlay.overlay-on{
+  visibility: visible;
+}

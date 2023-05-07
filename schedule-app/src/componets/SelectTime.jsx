@@ -8,9 +8,9 @@ function SelectTime({ defaultTime, setTime, handleTime }) {
         value={defaultTime}
         onChange={(e) => handleTime(e, setTime)}
       >
-        {TIMES.map((t) => 
+        {TIMES.map((t) => (
           <option key={t}>{t}</option>
-        )}
+        ))}
       </select>
     </>
   );
